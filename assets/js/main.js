@@ -65,3 +65,39 @@ sr.reveal(`.profile__buttons`, { delay: 800 });
 sr.reveal(`.filters__content`, { delay: 900 });
 sr.reveal(`.filters`, { delay: 1000 });
 
+
+
+const $bigBall = document.querySelector('.cursor__ball--big');
+const $smallBall = document.querySelector('.cursor__ball--small');
+const $hoverables = document.querySelectorAll('.hoverable');
+
+// Listeners
+document.body.addEventListener('mousemove', onMouseMove);
+for (let i = 0; i < $hoverables.length; i++) {
+    $hoverables[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+}
+
+// Move the cursor
+function onMouseMove(e) {
+    TweenMax.to($bigBall, .3, {
+        x: e.x - 15,
+        y: e.y - 15
+    })
+    TweenMax.to($smallBall, .1, {
+        x: e.x - 5,
+        y: e.y - 12
+    })
+}
+
+// Hover an element
+function onMouseHover() {
+    TweenMax.to($bigBall, .3, {
+        scale: 2
+    })
+}
+function onMouseHoverOut() {
+    TweenMax.to($bigBall, .3, {
+        scale: 1
+    })
+}

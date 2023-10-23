@@ -16,7 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
@@ -24,10 +24,23 @@
   </head>
 
   <body>
+    <div class="cursor">
+      <div class="cursor__ball cursor__ball--big">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+      </div>
+
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="10" width="10">
+          <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
     <!--=============== HEADER PROFILE ===============-->
     <header class="profile container">
+      <i class="ri-moon-line change-theme hoverable" id="theme-button"></i>
 
-      <i class="ri-moon-line change-theme" id="theme-button"></i>
       <div class="profile__container grid">
         <div class="profile__data">
           <div class="profile__border">
@@ -35,11 +48,11 @@
               <img src="./assets/img/avta.png" alt="" />
             </div>
           </div>
-          <h2 class="profile__name">Hà Minh Bảo Toàn</h2>
+          <h2 class="profile__name hoverable">Hà Minh Bảo Toàn</h2>
           <h3 class="profile__profession">
             Web <strong> &</strong> Software Developer
           </h3>
-          <ul class="profile__social">
+          <ul class="profile__social hoverable">
             <a
               href="mailto:someone@hmbt93@gmail.com?cc=someoneelse@theirsite.com&subject=Big%20News&body=Body-goes-here"
               class="profile__social-link"
@@ -116,16 +129,23 @@
     <main class="main">
       <section class="filters container">
         <!--=============== FILTERS TABS ===============-->
-        <ul class="filters__content">
-          <button class="filters__button filter-tab-active" data-target="#projects">
+        <ul class="filters__content ">
+          <button
+            class="filters__button filter-tab-active hoverable"
+            data-target="#projects"
+          >
             Projects
           </button>
-          <button class="filters__button" data-target="#skills">Skills</button>
+          <button class="filters__button hoverable" data-target="#skills">Skills</button>
         </ul>
 
         <div class="filters__sections">
           <!--=============== PROJECTS ===============-->
-          <div class="projects__content grid filters__active" data-content id="projects">
+          <div
+            class="projects__content grid filters__active"
+            data-content
+            id="projects"
+          >
             <article class="projects__card">
               <img
                 src="./assets/img/project1.jpg"
@@ -136,7 +156,7 @@
                 <div>
                   <span class="projects__subtitle">Web</span>
                   <h3 class="projects__title">Payment Site</h3>
-                  <a href="#" class="projects__button button button__small">
+                  <a href="#" class="projects__button button button__small hoverable">
                     <i class="ri-link"></i>
                   </a>
                 </div>
@@ -152,7 +172,7 @@
                 <div>
                   <span class="projects__subtitle">Web</span>
                   <h3 class="projects__title">Portfolio Website</h3>
-                  <a href="#" class="projects__button button button__small">
+                  <a href="#" class="projects__button button button__small hoverable">
                     <i class="ri-link"></i>
                   </a>
                 </div>
@@ -168,7 +188,7 @@
                 <div>
                   <span class="projects__subtitle">Movil</span>
                   <h3 class="projects__title">Fast Food</h3>
-                  <a href="#" class="projects__button button button__small">
+                  <a href="#" class="projects__button button button__small hoverable">
                     <i class="ri-link"></i>
                   </a>
                 </div>
@@ -184,7 +204,7 @@
                 <div>
                   <span class="projects__subtitle">Movil</span>
                   <h3 class="projects__title">Fast Food</h3>
-                  <a href="#" class="projects__button button button__small">
+                  <a href="#" class="projects__button button button__small hoverable">
                     <i class="ri-link"></i>
                   </a>
                 </div>
@@ -200,7 +220,7 @@
                 <div>
                   <span class="projects__subtitle">Movil</span>
                   <h3 class="projects__title">Fast Food</h3>
-                  <a href="#" class="projects__button button button__small">
+                  <a href="#" class="projects__button button button__small hoverable">
                     <i class="ri-link"></i>
                   </a>
                 </div>
@@ -209,7 +229,7 @@
           </div>
 
           <!--=============== SKILLS ===============-->
-          <div class="skills__content grid " data-content id="skills">
+          <div class="skills__content grid" data-content id="skills">
             <div class="skills__area">
               <h3 class="skills__title">Frontend developer</h3>
               <div class="skills__box">
@@ -319,14 +339,12 @@
 
     <!--=============== FOOTER ===============-->
     <footer class="footer container">
-
-      <span class="footer__copy">
-        &#169; ABCD All rights reserved
-      </span>
+      <span class="footer__copy"> &#169; ABCD All rights reserved </span>
     </footer>
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src="./assets/js/scrollreveal.min.js"></script>
+    <script src="./assets/js/TweenMax.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
