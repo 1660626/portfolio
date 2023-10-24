@@ -366,7 +366,9 @@ body.dark-theme {
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: -100%;
+  bottom: 0;
+  /* bottom: -100%; */
+
   left: 0;
 
   background: linear-gradient(180deg,
@@ -396,9 +398,9 @@ body.dark-theme {
   padding: .5rem;
 }
 
-.projects__card:hover .projects__modal {
+/* .projects__card:hover .projects__modal {
   bottom: 0;
-}
+} */
 
 /*=============== SKILLS ===============*/
 .skills__content {
@@ -533,6 +535,13 @@ body.dark-theme {
 }
 
 /* For large devices */
+
+@media screen and (max-width: 992px)  {
+  .cursor {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .container {
     margin-left: auto;
